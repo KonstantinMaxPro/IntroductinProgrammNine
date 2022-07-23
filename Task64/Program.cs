@@ -1,4 +1,4 @@
-﻿void Recursion(int start, int end)
+﻿void OrderNumbersRecursion(int start, int end)
 {
     if (start > end)
     {
@@ -6,7 +6,7 @@
     }
     Console.Write($"{start++} ");
 
-    Recursion(start, end);
+    OrderNumbersRecursion(start, end);
 }
 int startNumber = 0;
 int endNumber = 0;
@@ -38,6 +38,6 @@ while (!int.TryParse(Console.ReadLine(), out endNumber))
 Console.WriteLine("\n" + line);
 Console.WriteLine($"Вывод порядковых номеров от {startNumber} до {endNumber}");
 Console.ForegroundColor = ConsoleColor.Yellow;
-Recursion(startNumber, endNumber);
+OrderNumbersRecursion(startNumber, endNumber);
 Console.ResetColor();
 Console.WriteLine("\n" + line + "\n");
